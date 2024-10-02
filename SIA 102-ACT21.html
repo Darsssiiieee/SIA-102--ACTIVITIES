@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    
+    <title>OOCSS Example</title>
+</head>
+<style>
+/* Layout and Structure */
+
+/* Card component styles */
+.card {
+    background-color: #fff;
+    border: 3px solid #dddddd64;
+    border-radius: 5px;
+    padding: 20px;
+    margin: 15px;
+}
+
+/* Title and Content styles */
+.card__title {
+    font-size: 1.5em;
+    margin-bottom: 10px;
+}
+
+.card__content {
+    font-size: 1em;
+    color: #666;
+}
+
+/* Button styles */
+.btn {
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1em;
+}
+
+/* Primary button styles */
+.btn--primary{
+  width: 120px;
+  border-radius: 0.5rem; /* rounded-lg */
+  color: #ffffff; /* text-white */
+  font-weight: 700; /* font-bold */
+  margin-left: 20rem; /* p-4 */
+  background-color: #dc2626; /* bg-red-600 */
+  transition: transform 0.2s; /* duration-200 */
+}
+.btn--primary:hover {
+  transform: scale(1.05); /* hover:scale-105 */
+}
+
+/* Secondary button styles */
+.btn--secondary {
+    width: 120px;
+    border-radius: 0.5rem; /* rounded-lg */
+    color: #ffffff; /* text-white */
+    font-weight: 700; /* font-bold */
+    margin-left:4rem; /* p-4 */
+    background-color: #329f2a;
+    transition: transform 0.2s; /* duration-200 */
+}
+.btn--secondary:hover {
+  transform: scale(1.05); /* hover:scale-105 */
+}
+/* Hover effects for buttons */
+.btn:hover {
+    opacity: 0.8;
+}
+
+/* right side of the item*/
+.card {
+  height: 50vh;
+  width: 80%;
+  background-color: #e5e7eb; /* bg-base-200 */
+}
+
+.card_pic {
+  display: flex;
+  flex-direction: column;
+}
+.card_text {
+    text-align: right;
+  display: flow-root;
+  flex-direction: row-reverse;
+  margin-left: 20em;
+}
+
+@media (min-width: 1024px) {
+.card_pic {
+    flex-direction: row-reverse;
+  }
+}
+
+img {
+  max-width: 15rem; /* max-w-sm */
+  border-radius: 0.5rem; /* rounded-lg */
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05); /* shadow-2xl */
+  transition: transform 0.2s; /* transition-transform duration-200 */
+}
+
+img:hover {
+  transform: scale(1.05); /* hover:scale-105 */
+}
+
+h1 {
+  font-size: 3rem; /* text-5xl */
+  font-weight: 700; /* font-bold */
+}
+
+p {
+  padding-top: 1.5rem; /* py-6 */
+  padding-bottom: 1.5rem; /* py-6 */
+}
+</style>
+<body>
+    <div class="card">
+        <h1 class="card__title">My Man is Cupid</h1>
+        <div class="card_pic">
+            <img src="C:\SVFC agenda\Custom Office Templates\Desktop\SIA 102- ACTIVITIES\my-man-is-cupid.jpg"/>
+            <p class="card__content">My Man is Cupid is a romantic comedy series that tells the story of a man who becomes a cupid for others, but struggles to find his own love. This series is filled with humor, heartwarming moments, and the complexities of modern relationships, making it a must-watch for fans of romantic comedies.</p>
+        </div> 
+            <button class="btn btn--primary">See More</button>
+            <button class="btn btn--secondary">Learn More</button>
+    </div>
+
+    <div class="card"> 
+        <div class="card_text">
+            <h1 class="card__title">Taylor Swift's Eras Tour</h1>
+            <p class="card__content">Taylor Swift's Eras Tour is a captivating musical journey that showcases the evolution of Swift's music across different eras. This concert film features performances of her greatest hits, behind-the-scenes footage, and exclusive interviews, providing an intimate look at the iconic artist's creative process.</p>
+        </div>
+        <img src="C:\SVFC agenda\Custom Office Templates\Desktop\SIA 102- ACTIVITIES\eras-tour.jpg"/>
+            <button class="btn btn--primary">See More</button>
+            <button class="btn btn--secondary">Learn More</button>
+    </div>
+
+    <div class="card">  
+        <h1 class="card__title">A Shop for Killers</h1>
+        <div class="card_pic">
+            <img src="C:\SVFC agenda\Custom Office Templates\Desktop\SIA 102- ACTIVITIES\a-shop-for-killera.jpg"/>
+            <p class="card__content">A Shop for Killers is a gripping South Korean crime thriller series. The story revolves around a mysterious shop that provides tools and resources for professional killers. As the police start to close in on the shop's operations, tensions rise and the line between right and wrong becomes increasingly blurred. This series is a must-watch for fans of suspenseful, action-packed dramas.</p>
+        </div>
+            <button class="btn btn--primary">See More</button>
+            <button class="btn btn--secondary">Learn More</button>
+    </div>
+</body>
+</html>
