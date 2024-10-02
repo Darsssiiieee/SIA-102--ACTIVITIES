@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Simple Webpage using SMACSS</title>
+</head>
+<style>
+    /* Base styles - styles for default HTML elements */
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    margin: 0;
+}
+
+/* Layout styles - define major sections of the webpage */
+.layout-header {
+    background-color: #6d374f;
+    color: white;
+    padding: 10px 15px;
+    text-align: center;
+}
+
+.layout-main {
+    padding: 20px;
+   
+    display: flex;
+    justify-content: space-around;
+}
+
+.layout-footer {
+    background-color: #391d2a;
+    color: white;
+    text-align: center;
+    padding: 10px 15px;
+    margin-top: 8em;
+}
+.lastname{
+        width: 80%;
+        position: relative;
+        margin-bottom: 15px;
+    }
+    .lastname i{
+        position: absolute;
+        top: 50%;
+        left: 30px;
+        
+        font-size: 20px;
+        color: #bbb;
+    }
+    .lastname input{
+        width: 50%;
+        padding: 15px 40px;
+        border: none;
+        outline: none;
+        font-size: 18px;
+        background-color: #eee;
+        border-radius: 40px;
+    }
+    .lastname input::placeholder{
+        color: #bbb;
+        font-weight: 500;
+    }
+    .firstname{
+        width: 80%;
+        position: relative;
+        margin-bottom: 15px;
+    }
+    .firstname i{
+        position: absolute;
+        top: 50%;
+        left: 30px;
+        
+        font-size: 20px;
+        color: #bbb;
+    }
+    .firstname input{
+        width: 50%;
+        padding: 15px 40px;
+        border: none;
+        outline: none;
+        font-size: 18px;
+        background-color: #eee;
+        border-radius: 40px;
+    }
+    .firstname input::placeholder{
+        color: #bbb;
+        font-weight: 500;
+    }
+    .middlename{
+        width: 80%;
+        position: relative;
+        margin-bottom: 15px;
+    }
+    .middlename i{
+        position: absolute;
+        top: 50%;
+        left: 30px;
+        
+        font-size: 20px;
+        color: #bbb;
+    }
+    .middlename input{
+        width: 50%;
+        padding: 15px 40px;
+        border: none;
+        outline: none;
+        font-size: 18px;
+        background-color: #eee;
+        border-radius: 40px;
+    }
+    .middlename input::placeholder{
+        color: #bbb;
+        font-weight: 500;
+    }
+    .email{
+        width: 80%;
+        position: relative;
+        margin-bottom: 15px;
+    }
+    .email i{
+        position: absolute;
+        top: 50%;
+        left: 30px;
+        
+        font-size: 20px;
+        color: #bbb;
+    }
+    .email input{
+        width: 50%;
+        padding: 15px 40px;
+        border: none;
+        outline: none;
+        font-size: 18px;
+        background-color: #eee;
+        border-radius: 40px;
+    }
+    .email input::placeholder{
+        color: #bbb;
+        font-weight: 500;
+    }
+/* Module styles - reusable components */
+.module-card {
+    align-content: center;
+    text-align: center;
+    width: 500px;
+    height: 500px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+	background: linear-gradient(to right, #cf46e4 0%, #990047 100%);
+	color:#430544;
+	border: 2px solid;
+    outline: none;
+	border-radius: 40px;
+	opacity:100%;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.module-button {
+    background-color: #6d374f;
+    color: white;
+    border: none;
+    padding: 15px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 20px;
+    border-radius: 15px;
+    cursor: pointer;
+    font-weight: 700;
+    transition: background-color 0.3s ease
+}
+
+/* State styles - modify modules based on state */
+.state-active {
+    background-color: #913e63; /* Darkened button color if active */
+}
+.module-button:hover {
+    opacity: 0.7; /* Reduce opacity on hover */
+}
+</style>
+<body>
+    <header class="layout-header">
+        <h1 class="base-heading">Costumer Services</h1>
+    </header>
+    <main class="layout-main">
+        <section class="module-card">
+            <h2 class="base-heading">Costumer Personal Information</h2>
+            <p><i><b>Note:</b>Please provide your informtaion</i></p>
+            <div class="lastname">
+                <input type="text" placeholder="Last name" id="lastname" name="lastname">
+            </div>
+            <div class="firstname">
+                <input type="text" placeholder="First name" id="firstname" name="firstname">
+            </div>
+            <div class="middlename">
+                <input type="text" placeholder="Middle name" id="middlename" name="middlename">
+            </div>
+            <div class="email">
+                <input type="email" placeholder="Email" id="email" name="email">
+            </div>
+            <button class="module-button state-active">Submit</button>
+        </section>
+        <section class="module-card">
+            <h2 class="base-heading">Costumer Personal Information</h2>
+            <p><i><b>Note:</b>Please provide your informtaion</i></p>
+            <div class="lastname">
+                <input type="text" placeholder="Last name" id="lastname" name="lastname">
+            </div>
+            <div class="firstname">
+                <input type="text" placeholder="First name" id="firstname" name="firstname">
+            </div>
+            <div class="middlename">
+                <input type="text" placeholder="Middle name" id="middlename" name="middlename">
+            </div>
+            <div class="email">
+                <input type="email" placeholder="Email" id="email" name="email">
+            </div>
+            <button class="module-button state-active">Submit</button>
+        </section>
+    </main>
+    <footer class="layout-footer">
+        <p>© 2023 Simple Webpage. All rights reserved.</p>
+    </footer>
+</body>
+</html>
